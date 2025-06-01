@@ -14,6 +14,9 @@
 
 ---
 
+Project Deployed here:
+https://tusta-assignment.vercel.app/
+
 Screenshots
 
 > 📸 If you’re curious how it looks, here’s a quick demo:
