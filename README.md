@@ -1,7 +1,5 @@
 # Tusta Assignment
 
----
-
 ## How have I implemented this?
 
 - **Candlestick Chart** powered by [Apache ECharts](https://echarts.apache.org/)  
