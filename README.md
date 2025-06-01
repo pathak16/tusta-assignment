@@ -40,7 +40,6 @@ These instructions assume you have Node.js (≥12.x) and npm (or Yarn) installed
 1. Clone this repository:  
    
    git clone https://github.com/pathak16/tusta-assignment.git
-   cd tusta-assign
 
 2. Installing dependencies:
 
@@ -135,11 +134,6 @@ Example dummy data in [[date, open, high, low, close], …] format. You can repl
 
 public/index.html
 Standard CRA boilerplate—just renders the #root div.
-
-Dependencies:
-
-React (v16.8+ for Hooks)
-Apache ECharts (npm install echarts)
 
 
 
