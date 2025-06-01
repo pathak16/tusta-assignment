@@ -1,4 +1,4 @@
-# Candlestick Chart with Draggable Trendlines
+# Tusta Assignment
 
 Hey there! 👋
 
@@ -8,7 +8,7 @@ I’m by no means an ECharts or React wizard, so everything here is as much a le
 
 ---
 
-## What Is This?
+## How have I implemented this?
 
 - **Candlestick Chart** powered by [Apache ECharts](https://echarts.apache.org/)  
 - **Canvas Overlay** on top of the chart for drawing, dragging, and resizing trendlines  
@@ -28,7 +28,6 @@ Screenshots
 
 1. **Drawing a new line**  
    ![Drawing Preview](./screenshots/draw-preview.png)
-
 
 
 3. **Hovering over an endpoint**  
@@ -59,10 +58,13 @@ These instructions assume you have Node.js (≥12.x) and npm (or Yarn) installed
    Or if you prefer Yarn:
    yarn install
 
-3. Start the development server
+   Install Apache ECharts:
+   npm install echarts
+
+4. Start the development server
    npm start
 
-4. Build for production
+5. Build for production
    npm run build
 
 
@@ -148,26 +150,7 @@ React (v16.8+ for Hooks)
 Apache ECharts (npm install echarts)
 
 
-Troubleshooting:
 
-**Canvas not capturing clicks?
-**Make sure your <canvas> has pointerEvents: "auto". If it’s still none, clicks will pass through to the chart and you’ll trigger ECharts’ zoom instead of drawing.
-
-**Green preview line not appearing**
-Double-check that you deferred isDrawingNewLineRef.current = true with setTimeout(..., 0). Without that, the first mousemove often fires before the flag is set, so it never enters the “drawing preview” code.
-
-**Saved lines disappear on reload
-**Confirm that localStorage.setItem("trendlines", ...) is being called in your onMouseUp (when finalizing). Also confirm that on mount you run loadTrendlinesFromLocalStorage() before your first drawAllLines().
-
-**Chart zoom/responsive behavior**
-
-We call resizeCanvas() and drawAllLines() on
-
-window.addEventListener("resize", updateOverlay);
-chart.on("dataZoom", updateOverlay);
-chart.on("rendered", updateOverlay);
-chart.on("resize", updateOverlay);
-If you add other ECharts events (e.g. custom data updates), be sure to call updateOverlay() there too.
 
 
 
