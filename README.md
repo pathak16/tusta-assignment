@@ -29,7 +29,7 @@ Screenshots
    ![Delete Icon](./screenshots/delete.png)
 
 4. **Multiple Trendlines**
-   ![Muliple](./screenshots/delete.png)
+   ![Multiple](./screenshots/delete.png)
 
 ---
 
