@@ -19,17 +19,17 @@ Screenshots
 > 📸 If you’re curious how it looks, here’s a quick demo:
 
 1. **Drawing a new line**  
-   ![Drawing Preview](./screenshots/draw-preview.png)
+   ![Drawing Preview](/Users/sohampathak/echarts-trendline-react/screenshots/draw-preview.png)
 
 
-3. **Hovering over an endpoint**  
-   ![Endpoint Tooltip](./screenshots/endpoint-tooltip.png)
+2. **Hovering over an endpoint**  
+   ![Endpoint Tooltip](/Users/sohampathak/echarts-trendline-react/screenshots/hover_coordinates.png)
 
-4. **Dragging / Resizing a line**  
-   ![Dragging Line](./screenshots/drag-resize.png)
+3. **Delete Icon on Hover**  
+   ![Delete Icon](/Users/sohampathak/echarts-trendline-react/screenshots/delete.png)
 
-5. **Delete Icon on Hover**  
-   ![Delete Icon](./screenshots/delete-icon.png)
+4. **Multiple Trendlines**
+   ![Muliple](/Users/sohampathak/echarts-trendline-react/screenshots/delete.png)
 
 ---
 
