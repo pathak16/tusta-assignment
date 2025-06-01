@@ -19,17 +19,17 @@ Screenshots
 > 📸 If you’re curious how it looks, here’s a quick demo:
 
 1. **Drawing a new line**  
-   ![Drawing Preview](/Users/sohampathak/echarts-trendline-react/screenshots/draw-preview.png)
+   ![Drawing Preview](./screenshots/draw-preview.png)
 
 
 2. **Hovering over an endpoint**  
-   ![Endpoint Tooltip](/Users/sohampathak/echarts-trendline-react/screenshots/hover_coordinates.png)
+   ![Endpoint Tooltip](./screenshots/hover_coordinates.png)
 
 3. **Delete Icon on Hover**  
-   ![Delete Icon](/Users/sohampathak/echarts-trendline-react/screenshots/delete.png)
+   ![Delete Icon](./screenshots/delete.png)
 
 4. **Multiple Trendlines**
-   ![Muliple](/Users/sohampathak/echarts-trendline-react/screenshots/delete.png)
+   ![Muliple](./screenshots/delete.png)
 
 ---
 
@@ -39,7 +39,7 @@ These instructions assume you have Node.js (≥12.x) and npm (or Yarn) installed
 
 1. Clone this repository:  
    
-   git clone https://github.com/pathak16/tusta-assign.git
+   git clone https://github.com/pathak16/tusta-assignment.git
    cd tusta-assign
 
 2. Installing dependencies:
