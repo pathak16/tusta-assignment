@@ -1,11 +1,5 @@
 # Tusta Assignment
 
-Hey there! 👋
-
-Thanks for stopping by. I put this little project together to explore how to overlay custom trendlines on a candlestick chart using React and Apache ECharts. It started as a simple experiment—basically me thinking, “I wonder if I can draw and drag a line right on top of an ECharts candlestick.” As it grew, it became a small demo app with a canvas overlay, localStorage persistence, delete icons, and live resizing/dragging of lines. 
-
-I’m by no means an ECharts or React wizard, so everything here is as much a learning exercise for me as it hopefully is for you. If you find any bugs, rough edges, or places where the code could be cleaner, please feel free to open an issue or send a PR. I’d love to learn from your suggestions.
-
 ---
 
 ## How have I implemented this?
