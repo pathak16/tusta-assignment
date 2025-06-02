@@ -22,7 +22,7 @@ Screenshots
 > 📸 If you’re curious how it looks, here’s a quick demo:
 
 1. **Drawing a new line**  
-   ![Drawing Preview](./screenshots/draw-preview.png)
+   !Draw Preview
 
 
 2. **Hovering over an endpoint**  
