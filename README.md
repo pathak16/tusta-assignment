@@ -44,7 +44,7 @@ These instructions assume you have Node.js (≥12.x) and npm (or Yarn) installed
    
    git clone https://github.com/pathak16/tusta-assignment.git
 
-2. Installing dependencies:
+3. Installing dependencies:
 
    Using npm:
    npm install
@@ -56,7 +56,7 @@ These instructions assume you have Node.js (≥12.x) and npm (or Yarn) installed
    npm install echarts
 
 4. Start the development server
-   npm start
+   npm run dev
 
 5. Build for production
    npm run build
@@ -88,13 +88,14 @@ How it works:
 5. Rendering All Saved Lines
 
   Whenever the chart resizes or zooms (on dataZoom, rendered, resize), we call drawAllLines().
-  That method loops through trendlinesRef.current, converts each start/end from data→pixel (chart.convertToPixel), draws the line, and renders small circular “handles” at each           endpoint.
+  That method loops through trendlinesRef.current, converts each start/end from data→pixel (chart.convertToPixel), draws the line, and        renders small circular “handles” at each endpoint.
 
 6. Dragging / Resizing Existing Lines
 
   On mousedown, we loop through each saved line:
   
   Convert endpoints to pixels → check if the click is within 8px of either handle → if so, set draggingLineRef.current = { line, mode: "start" or "end" }.
+  
   Otherwise, check if the click is “near” the line body (within 6px). If yes, record offsets from the click to each endpoint → set mode: "move".
   
   On mousemove (while a draggingLineRef.current is set):
