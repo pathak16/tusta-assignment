@@ -62,35 +62,35 @@ These instructions assume you have Node.js (≥12.x) and npm (or Yarn) installed
    npm run build
 
 
-How it works:
+## How it works:
 
 ### 1. ECharts Initialization
 
    We initialize a simple candlestick chart inside a React useEffect.
    The x-axis is a category of dates (from dummy data), and the y-axis is the price range.
 
-2. Canvas Overlay
+### 2. Canvas Overlay
 
   A <canvas> element sits on top of the chart (absolute positioning, full width/height).
   Canvas has pointer-events: auto, so it catches all mouse events (and we call e.preventDefault() to stop the chart’s native pan/zoom).
 
-3. Drawing & Previewing a New Line
+### 3. Drawing & Previewing a New Line
 
   On mousedown (left-click) in a blank area, we defer isDrawingNewLine = true via setTimeout(..., 0) so the first mousemove sees it.
   While dragging, we clear the canvas and draw a green preview line from the initial click to the current mouse position.
 
-4. Saving a New Line
+### 4. Saving a New Line
 
   On mouseup, we convert both endpoints from pixel-space to data-space (chart.convertFromPixel) and push a new trendline object into trendlinesRef.current.
   That line object looks like { id: Date.now(), start: { xData, yData }, end: { xData, yData } }.
   We then serialize trendlinesRef.current into localStorage so it persists.
 
-5. Rendering All Saved Lines
+### 5. Rendering All Saved Lines
 
   Whenever the chart resizes or zooms (on dataZoom, rendered, resize), we call drawAllLines().
   That method loops through trendlinesRef.current, converts each start/end from data→pixel (chart.convertToPixel), draws the line, and        renders small circular “handles” at each endpoint.
 
-6. Dragging / Resizing Existing Lines
+### 6. Dragging / Resizing Existing Lines
 
   On mousedown, we loop through each saved line:
   
@@ -104,41 +104,11 @@ How it works:
   
   After any change, we call drawAllLines().
 
-7. Hover & Delete Icon
+### 7. Hover & Delete Icon
 
 On every mousemove when not dragging/drawing, we check each line’s endpoints (pixel-space) for proximity < 8px. If one matches, we show a tooltip with date & price.
 If not hovering an endpoint, we check if the mouse is “near” any line body (pixel-space). If so, we set a React state hoveredLine = { id, x: midX, y: midY }. That state renders a small red “×” button at that midpoint.
 Clicking that “×” deletes the line from trendlinesRef.current and updates localStorage.
-
-
-Project Structure
-
-tusta-assign/
-├── public/
-│   ├── index.html
-│   └── …
-├── src/
-│   ├── components/
-│   │   └── CandlestickWithTrendline.jsx    # Main component (chart + overlay)
-│   ├── data/
-│   │   └── rawData.js                      # Dummy candlestick data
-│   ├── App.js
-│   ├── index.js
-│   └── styles.css                          # Optional minimal styling
-├── .gitignore
-├── package.json
-└── README.md
-
-
-src/components/CandlestickWithTrendline.jsx
-Contains the React component that initializes ECharts, sets up the <canvas> overlay, and implements all drawing/dragging logic.
-
-src/data/rawData.js
-Example dummy data in [[date, open, high, low, close], …] format. You can replace this file or swap in a real API call if you like (e.g. Binance).
-
-public/index.html
-Standard CRA boilerplate—just renders the #root div.
-
 
 
 
