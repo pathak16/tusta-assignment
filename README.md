@@ -26,13 +26,13 @@ Screenshots
 
 
 2. **Hovering over an endpoint**  
-   ![Endpoint Tooltip](./screenshots/hover_coordinates.png)
+   ![Endpoint Tooltip](./echarts-trendline-react/screenshots/hover_coordinates.png)
 
 3. **Delete Icon on Hover**  
-   ![Delete Icon](./screenshots/delete.png)
+   ![Delete Icon](./echarts-trendline-react/screenshots/delete.png)
 
 4. **Multiple Trendlines**
-   ![Multiple](./screenshots/delete.png)
+   ![Multiple](./echarts-trendline-react/screenshots/multiple_trendlines.png)
 
 ---
 
