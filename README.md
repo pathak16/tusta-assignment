@@ -64,7 +64,7 @@ These instructions assume you have Node.js (≥12.x) and npm (or Yarn) installed
 
 How it works:
 
-1. ECharts Initialization
+###1. ECharts Initialization
 
    We initialize a simple candlestick chart inside a React useEffect.
    The x-axis is a category of dates (from dummy data), and the y-axis is the price range.
