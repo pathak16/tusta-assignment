@@ -22,7 +22,7 @@ Screenshots
 > 📸 If you’re curious how it looks, here’s a quick demo:
 
 1. **Drawing a new line**  
-   !Draw Preview
+   ![Draw Preview](./echarts-trendline-react/screenshots/draw-preview.png)
 
 
 2. **Hovering over an endpoint**  
